@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+﻿<script>
+  // 强制写入“今天已经看过”的标记，跳过开屏
+  try {
+    var today = new Date().toDateString();
+    localStorage.setItem('mochi:seen', today);
+    localStorage.setItem('mochi:ageOk', 'true');
+  } catch(e) {}
+</script><!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
